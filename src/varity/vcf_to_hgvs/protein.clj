@@ -110,10 +110,12 @@
   ([pos rg] (protein-position pos 0 rg))
   ([pos offset rg]
    (let [cds-coord (rg/cds-coord pos rg)
-         ppos-end (inc (quot (dec (:position (rg/cds-coord (:cds-end rg) rg))) 3))]
+         ppos-end (inc (quot (dec (:position (rg/cds-coord (:cds-end rg) rg))) 3))
+         cds-coord-end (inc (quot (dec (+ (:position cds-coord) offset)) 3))]
      (if (coord/in-exon? cds-coord)
-       (min ppos-end
-            (inc (quot (dec (+ (:position cds-coord) offset)) 3)))))))
+       (case (:strand rg)
+         "+" (min ppos-end cds-coord-end)
+         "-" (max ppos-end cds-coord-end))))))
 
 (defn- ->protein-variant
   [rg pos ref alt seq-info]

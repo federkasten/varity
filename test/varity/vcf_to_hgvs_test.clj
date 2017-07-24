@@ -28,6 +28,7 @@
         "chr3" 116193879 "ACAC" "A" '("NM_001318915:c.156-107326_156-107324delGTG"
                                       "NM_002338:c.156-107326_156-107324delGTG") ; cf. rs17358
         "chr16" 282999 "GTCTC" "G" '("NM_001176:c.*186_*189delTCTC") ; cf. rs28365940 (deletion in UTR)
+        "chr6" 33086236 "TA" "T" '("NM_002121:c.*1delA") ; cf. rs67523850
 
         ;; Duplication
         "chr2" 47806842 "T" "TGACT" '("NM_000179:c.4062_4065dupGACT"
@@ -101,6 +102,7 @@
         "chr3" 198153259 "GGCAGCAGCA" "G" '("p.Q82_Q84del"); cf. rs56683636 (+)
         "chr1" 247815239 "AAGG" "A" '("p.S163del") ; cf. rs35979231 (-)
         "chr1" 84574315 "CGCAGCGCCA" "C" '("p.L31_L33del"); cf. rs3217269 (-)
+        "chr6" 33086236 "TA" "T" '("p.*260=")
 
         ;; Duplication
         "chr2" 26254257 "G" "GACT" '("p.T2dup") ; cf. rs3839049 (+)
